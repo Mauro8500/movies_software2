@@ -1,0 +1,57 @@
+#obtener todas las peliculas
+###
+GET http://localhost:8080/administrador/peliculas
+Accept: application/json
+
+#obtener un pelicula por id
+###
+GET http://localhost:8080/administrador/peliculas/2
+Accept: application/json
+
+#agregar pelicula
+###
+POST http://localhost:8080/administrador/peliculas
+Content-Type: application/json
+
+{
+  "nombre": "Star Wars",
+  "descripcion": "En una galaxia muy muy lejana...",
+  "precio": 20,
+  "disponibilidad": 200,
+  "status": 1
+}
+
+
+
+
+###
+#actualizar pelicula
+PUT http://localhost:8080/administrador/peliculas/5
+Content-Type: application/json
+
+{
+  "nombre": "Star Wars",
+  "descripcion": "En una galaxia muy muy lejana...",
+  "precio": 20,
+  "disponibilidad": 50,
+  "status": 1
+}
+
+###
+#obtener las reservas que tengan el pick up segun su id
+GET http://localhost:8080/administrador/peliculas/pickups/1
+Accept: application/json
+
+###
+#borra pelicula
+DELETE http://localhost:8080/administrador/peliculas/5
+Accept: application/json
+
+###
+#crea una categoria
+POST http://localhost:8080/administrador/categoria
+Content-Type: application/json
+
+{
+  "nombrecate": "Ficcion"
+}

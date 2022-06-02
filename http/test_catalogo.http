@@ -1,0 +1,34 @@
+###
+#obtiene las peliculas disponibles cuyo status sea 1
+GET http://localhost:8080/catalogo/peliculas
+Accept: application/json
+
+###
+#busqueda por pelicula, actor y categoria
+GET http://localhost:8080/catalogo/peliculas?pelicula=Wick&actor=Keanu&categoria=Suspenso
+Accept: application/json
+
+###
+#busqueda por pelicula, actor y categoria desordenado
+GET http://localhost:8080/catalogo/peliculas?actor=Keanu&categoria=Suspenso&pelicula=Wick
+Accept: application/json
+
+###
+#busqueda por pelicula y actor
+GET http://localhost:8080/catalogo/peliculas?pelicula=Wick&actor=Keanu
+Accept: application/json
+
+###
+#busqueda por pelicula
+GET http://localhost:8080/catalogo/peliculas?pelicula=IT
+Accept: application/json
+
+###
+#busqueda por actor
+GET http://localhost:8080/catalogo/peliculas?actor=Keanu Reeves
+Accept: application/json
+
+###
+#busqueda por categoria
+GET http://localhost:8080/catalogo/peliculas?categoria=Suspenso
+

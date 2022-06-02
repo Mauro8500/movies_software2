@@ -1,0 +1,16 @@
+###
+#crea un nuevo cliente
+POST http://localhost:8080/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Carla",
+  "apellido": "Condori",
+  "usuario": "carly_si",
+  "password": "carl123"
+}
+
+###
+#auth cliente
+GET http://localhost:8080/clientes/2
+Accept: application/json
